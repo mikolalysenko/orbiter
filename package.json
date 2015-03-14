@@ -7,16 +7,17 @@
     "example": "example"
   },
   "dependencies": {
-    "bunny": "^1.0.1",
-    "canvas-fit": "^1.2.0",
     "gl-mat4": "^1.1.2",
-    "gl-simplicial-complex": "^4.0.0",
     "mouse-change": "^1.1.1",
     "mouse-wheel": "^1.0.2",
-    "orbit-camera-controller": "^3.0.0",
-    "right-now": "^1.0.0"
+    "orbit-camera-controller": "^3.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bunny": "^1.0.1",
+    "canvas-fit": "^1.2.0",
+    "gl-simplicial-complex": "^4.0.0",
+    "right-now": "^1.0.0"  
+  },
   "scripts": {
     "test": "tape test/*.js"
   },
