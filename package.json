@@ -1,6 +1,6 @@
 {
   "name": "orbiter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Orbiting quaternion camera",
   "main": "orbiter.js",
   "directories": {
