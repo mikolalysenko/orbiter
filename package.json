@@ -1,0 +1,39 @@
+{
+  "name": "orbiter",
+  "version": "1.0.0",
+  "description": "Orbiting quaternion camera",
+  "main": "orbiter.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "bunny": "^1.0.1",
+    "canvas-fit": "^1.2.0",
+    "gl-mat4": "^1.1.2",
+    "gl-simplicial-complex": "^4.0.0",
+    "mouse-change": "^1.1.1",
+    "mouse-wheel": "^1.0.2",
+    "orbit-camera-controller": "^3.0.0",
+    "right-now": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikolalysenko/orbiter.git"
+  },
+  "keywords": [
+    "orbit",
+    "quaternion",
+    "arcball",
+    "camera"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/orbiter/issues"
+  },
+  "homepage": "https://github.com/mikolalysenko/orbiter"
+}
