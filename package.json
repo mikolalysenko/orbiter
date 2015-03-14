@@ -1,6 +1,6 @@
 {
   "name": "orbiter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Orbiting quaternion camera",
   "main": "orbiter.js",
   "directories": {
@@ -16,7 +16,7 @@
     "bunny": "^1.0.1",
     "canvas-fit": "^1.2.0",
     "gl-simplicial-complex": "^4.0.0",
-    "right-now": "^1.0.0"  
+    "right-now": "^1.0.0"
   },
   "scripts": {
     "test": "tape test/*.js"
