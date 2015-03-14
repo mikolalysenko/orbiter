@@ -106,6 +106,12 @@ Sets the camera center/eye/up vector to look at a fixed target
 * `eye` is the position of the camera in world coordinates
 * `up` is a vector pointing up
 
+#### `camera.box(lo, hi)`
+Targets the camera at a bounding box.  This is a short cut for skipping some of the boilerplate associated with lookAt
+
+* `lo` is the lower bound on the box
+* `hi` is the upper bound on the box
+
 #### `camera.rotate(yaw, pitch, roll)`
 Applies an incremental rotation to the camera
 

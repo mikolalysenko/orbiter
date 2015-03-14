@@ -106,6 +106,20 @@ proto.lookAt = function(eye, center, up) {
   this.controller.lookAt(this.lastT(), eye, center, up)
 }
 
+
+var scratchEye    = [0,0,0]
+var scratchCenter = [0,0,0]
+var scratchUp     = [0,1,0]
+proto.box = function(lo, hi) {
+  var diam = 0
+  for(var i=0; i<3; ++i) {
+    eye[i] = center[i] = 0.5 * (lo[i]+hi[i])
+    diam = Math.max(diam, hi[i] - lo[i])
+  }
+  eye[1] = hi[1] + 2 * diam
+  this.controller.lookAt(now(), eye, center, up)
+}
+
 proto.setMatrix = function(mat) {
   this.controller.setMatrix(this.lastT(), mat)
 }
