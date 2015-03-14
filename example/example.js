@@ -1,0 +1,38 @@
+var createCamera = require('../orbiter')
+var bunny = require('bunny')
+var perspective = require('gl-mat4/perspective')
+var createMesh = require('gl-simplicial-complex')
+
+var canvas = document.createElement('canvas')
+document.body.appendChild(canvas)
+window.addEventListener('resize', require('canvas-fit')(canvas))
+
+var gl = canvas.getContext('webgl')
+
+var camera = createCamera(canvas, {
+  eye:    [50,0,0],
+  center: [0,0,0],
+  zoomMax: 500
+})
+
+var mesh = createMesh(gl, {
+  cells:      bunny.cells,
+  positions:  bunny.positions,
+  colormap:   'jet'
+})
+
+var projectionMatrix = new Array(16)
+
+function render() {
+  requestAnimationFrame(render)
+  if(camera.tick()) {
+    gl.viewport(0, 0, canvas.width, canvas.height)
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
+    gl.enable(gl.DEPTH_TEST)
+    mesh.draw({
+      projection: perspective(projectionMatrix, Math.PI/4, canvas.width/canvas.height, 0.01, 1000),
+      view: camera.matrix
+    })
+  }
+}
+render()
